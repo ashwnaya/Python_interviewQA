@@ -1,0 +1,79 @@
+l1=[2,4,2,1,5,6,7,8,9]
+#l1[7]=22
+print(l1)
+print(l1[0:3])
+print(l1[2:-1])
+print(l1[-5:-1])
+
+list1=[101,88,9999]
+print(len(list1))
+print(min(list1))
+print(max(list1))
+print(sum(list1))
+print(sorted(list1))
+
+list1=['JAVA','Python','Pyramid','Python','Django','JAVA','Flask']
+list2=['India','C']
+print(list1.index("Python",2))#returns value after the index shared ir after index 2
+print(list1.count('Python'))#count the number of times particular value is mentioned
+print(list1.append('AWS'))#attaching one value at the end of list
+list1.extend(list2)#attaching more than one value at a time
+print(list1.insert(3,'SQL')) #inserting a value at a location index(index,value)
+print(list1.remove('SQL'))#remove partiular entry from the list
+print(list1.pop())#removes last element
+print(list1.pop(0))#removes element present at given index
+print(list1)
+list1.sort()#sorting the list in asc order
+print(list1)
+list1.sort(reverse=True)#reverse = True sorting in reverse order
+print(list1)
+list1.reverse()#reverse the given list
+print(list1)
+
+
+list1=[20,50,30,40,12]
+list2=list1 #cloning which means pointer points to same memory location
+print(id(list1)) #18398664
+print(id(list2)) #18398664
+
+#shallow copy
+list1=[20,50,30,40,12]
+list2=list1.copy() #copy the value of one list to otherlist in different location . Data modified in one list wont change value of other list
+print(id(list1)) #18398264
+print(id(list2)) #48177200
+
+list1[0]=25
+print(list1) #[25, 50, 30, 40, 12]
+print(list2) #[20, 50, 30, 40, 12]
+
+list1=[1,2,[3,4]]
+list2=list1.copy()
+print(id(list1)) #54614136
+print(id(list2)) #26393696
+list1[2][0]=100
+print(list1) #[1, 2, [100, 4]]
+print(list2) #[1, 2, [100, 4]]  to overcome this we are using deep copy
+
+list1=[1,2,[3,4]]
+import copy
+list2=copy.deepcopy(list1)
+print(list1)
+print(list2)
+list2[2][0]=100
+print(list1) #[1, 2, [3, 4]]
+print(list2) #[1, 2, [100, 4]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

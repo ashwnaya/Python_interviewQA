@@ -1,0 +1,78 @@
+d1={'sid':101,'sname':'Sri','email':'Sri@gmail.com'}
+d2={5:'five',6:'six',4:'four',1:'One',2:'Two'}
+print(d1.get('sid'))
+print(d1.get('sname'))
+print(d1['email'])
+d1['sname']='Srinivas'
+print(d1['sname'])
+del d1['sname']
+print(d1)
+print('sid' in d1)
+for x in d1:
+    print(x,d1.get(x))
+print(min(d1))
+print(max(d1))
+print(sum(d2))
+print(sorted(d2))
+
+d1={99:'Sri',88:'Vas',77:'SD'}
+print("get method",d1.get(101))#get the value of this key if not present returns None
+print(d1.setdefault(102,'AAA'))#add this element at the last of the dict
+print(d1.setdefault(99)) #if key is present return the value else append the passed key to the dict with None as value
+print(d1.update({100:'India'}))#should pass dict as input
+print(d1.pop(77))#should pass one element
+print(d1.popitem())#it will pop last item
+#print(d1.clear() cleans entire dcit
+d2=d1.copy() #shallow copy
+print(id(d2))
+print(id(d1))
+k2=d2.keys()#dict_keys([99, 88, 102])
+print(k2)
+v2=d2.values()#dict_values(['Sri', 'Vas', 'AAA'])
+print(v2)
+item2=d2.items()
+print(item2)#dict_items([(99, 'Sri'), (88, 'Vas'), (102, 'AAA')])
+
+
+t1=('one','two','three','four','five')
+t2=(1,2,3,4,5)
+dict_out={}
+
+for i,j in zip(t2,t1):
+    dict_out.setdefault(i,j)
+print(dict_out)
+
+dict_out={i:j for i,j in zip(t2,t1)}
+print(dict_out)
+
+l1=['one','two','three','four','five']
+for i,j in enumerate(l1):
+    print(i+1,j)
+
+dict_out={j:i+1 for i,j in enumerate(l1)}
+print(dict_out)
+
+dict1={}
+for x in l1:
+    dict1.setdefault(l1.index(x)+1,x)
+print(dict1)
+
+dict1={l1.index(x)+1:x for x in l1}
+print(dict1)
+
+string1="I love my country"
+string2="I am from India"
+for i,j in zip(string1,string2):
+    print(i,j)
+
+
+
+
+
+
+
+
+
+
+
+

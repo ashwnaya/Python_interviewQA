@@ -1,0 +1,80 @@
+s[begin:end:step]
+The step value can be either +ve or -ve
+If it is +ve we have to move in forward direction from left to right
+If it is -ve we have to move in backward direction from rigth to left
+default value for step is: +1
+In forward direction we have to consider from begin index to end-1 index.
+In backward direction we have to consider from begin index to end+1 index.
+
+name='CourseCube'
+print(name[1:100]) #it will return value till max index
+print(name[0:-1])
+print(name[0:-2])
+print(name[0:-9])
+print(name[0:-18])#blank
+print(name[2:6])
+print(name[-8:-4])# forward direction
+print(name[-2:-7:-1]) # backword direction
+
+name='SriNiVas daNde jLC'
+print(name.capitalize()) #First character upper case rest all in lower case
+print(name.title())  #Srinivas Dande Jlc
+print(name.swapcase())#Swaps the case of every character
+print(name.lower())#converts all char to lowercase
+print(name.upper())#converts all char to upper case
+print(name.islower())
+print(name.isupper())
+print(name.isdigit())
+print(name.isalpha())
+print(name.isalnum())
+
+
+mystr='Hello Guys Guys'
+print(mystr.find('Guys')) #returns -1 if not available
+print(mystr.find('Guys',5)) #finds value after 5th index
+print(mystr.find('Gyus',6,20))# finds value between 6 and 20 if not found returns -1
+print(mystr.rfind('Guys')) #same as find returns last index
+print(mystr.rfind('Guys',6,10))
+print(mystr.rfind('Guys',19)) #returns -1 if not found
+print(mystr.index('Guys'))#returns first identified values index
+#print(mystr.index('Welcome')) #ValueError: substring not found
+print(mystr)
+mystr=mystr.replace('Hello','Hai')
+print(mystr)
+mystr=mystr.replace("Guys",'Students',1) #replace the occurance of old string with new string
+print(mystr)
+
+mystr='Hello guys,welcome to JLC,welcome Guys'
+#mystr=mystr.replace(',',' ')
+#mystr=mystr.split(' ') #splits the string at specified delimiter
+#print(mystr)
+#mystr=mystr.split('welcome',0)#['Hello guys,welcome to JLC,welcome Guys']
+#mystr=mystr.split('welcome',1)#['Hello guys,', ' to JLC,welcome Guys']
+mystr=mystr.split('welcome',2)#['Hello guys,', ' to JLC,', ' Guys']
+print(mystr)
+
+mystr='Hello guys,\n welcome to JLC,\n welcome guys'
+mystr.splitlines()
+print(mystr)
+print(len(mystr.splitlines()))#3
+
+print(mystr.count('guys'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
